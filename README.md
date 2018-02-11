@@ -12,7 +12,9 @@ curl -sSL https://get.docker.com | sh
 
 Build the image with:
 
+```
 docker build . -t calibre
+```
 
 This takes a long while; especially on the `setup.py bdist_wheel for lxml` step.
 
