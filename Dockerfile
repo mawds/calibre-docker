@@ -12,6 +12,7 @@ RUN pip install html5_parser
 # Need a newer version of mechanize than installed for some
 # recipes, e.g. lrb_payed
 RUN pip install mechanize --upgrade
+RUN pip install msgpack
 # Download, compile, install and remove source
-RUN curl -L https://calibre-ebook.com/dist/src | tar xvJ && cd calibre* && python2 setup.py install && cd ..  && rm -r calibre-3*/
+RUN curl -L https://calibre-ebook.com/dist/src > dockertmp && tar xvJf dockertmp && cd calibre* && python2 setup.py install && cd ..  && rm -r calibre-3*/ && rm dockertmp
  
