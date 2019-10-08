@@ -21,6 +21,10 @@ RUN pip install msgpack
 RUN apt-get update && apt-get -y install wget 
 RUN wget https://github.com/hunspell/hunspell/files/2573619/hunspell-1.7.0.tar.gz && tar xvzf hunspell-1.7.0.tar.gz && cd hunspell-1.7.0 && ./configure && make && make install
 
+RUN pip install css_parser
+ 
 # Download, compile, install and remove source
 RUN curl -L https://calibre-ebook.com/dist/src > dockertmp && tar xvJf dockertmp && cd calibre* && python2 setup.py install && cd ..  && rm -r calibre-4*/ && rm dockertmp
+ 
+RUN pip install bs4
  
