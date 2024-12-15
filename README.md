@@ -1,5 +1,8 @@
 # Dockerised Calibre for Raspberry Pi
 
+
+**This is no longer needed - Linuxserver's calibre image has an arm64 build and so can be used instead: https://docs.linuxserver.io/images/docker-calibre/**
+
 This Dockerfile builds [Calibre](https://calibre-ebook.com/) within a Docker container on the Raspberry Pi
 
 Install Docker on the Pi with:
